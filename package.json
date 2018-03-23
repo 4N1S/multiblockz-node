@@ -1,0 +1,38 @@
+{
+  "name": "mutliblockz-node",
+  "version": "0.0.1",
+  "description": "wrapper api for blockchain Explorer",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4N1S/mutliblockz-node.git"
+  },
+  "keywords": [
+    "cryptocurrencies",
+    "mutliblockz",
+    "explorer",
+    "nodejs",
+    "wrapper"
+  ],
+  "author": "Anis Haboubi",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "crypto": "latest",
+    "https": "latest",
+    "underscore": "^1.8.3",
+    "url": "latest",
+    "urlencode": "latest"
+  },
+  "bugs": {
+    "url": "https://github.com/4N1S/mutliblockz-node/issues"
+  },
+  "homepage": "https://github.com/4N1S/mutliblockz-node#readme",
+  "directories": {
+    "example": "examples"
+  },
+  "devDependencies": {}
+}
