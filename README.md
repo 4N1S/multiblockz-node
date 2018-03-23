@@ -28,7 +28,7 @@ var client = new multiblockz();
 * [api](#api)
 * [history](#history)
 
-###status
+### STATUS
 **Examples**
 You can obtain summary information about all our explorers 
 
@@ -45,27 +45,28 @@ client.status(function (error, data) {
 
 ```
 
-###api
+### API
+
 **Examples**
 Request:
     /api
 
     param: 
-    coins: string (symbol blockchain) example : ltc,btc,neo
-    query: 
-      addresses: returns a JSON object with the number of known and non-zero addresses (with funds)
-      circulating: returns the number of circulating coins (minus reserve, Prime holdings...)
-      getblockcount: returns the current block height as a plain text string
-      getdifficulty: returns the difficulty as a plain text string
-      hashrate: returns the hashrate in GH/s (when supported, blockchain.info API compatible)
-      nethashps: returns the hashrate in H/s (when supported)
-      netmhashps: returns the hashrate in MH/s (when supported)
-      rich: returns the rich list top 1000 (JSON format)
-      summary: returns summary information for all explorers
-      ticker.btc: returns the last market ticker in BTC, as tracked by the explorer, only one market is tracked and this value can be several minutes behind the market. Use market APIs directly for more accurate quotations.
-      ticker.usd: returns the last market ticker in USD, as tracked by the explorer and BitPay rate, only one market is tracked and this value can be several minutes behind the market. Use market APIs directly for more accurate quotations.
-      totalbc: returns the outstanding number of coins in satoshis (x 1e8, for compatibility with blockhain.info API)
-      totalcoins: returns the outstanding number of coins
+      coins: string (symbol blockchain) example : ltc,btc,neo
+      query: 
+        addresses: returns a JSON object with the number of known and non-zero addresses (with funds)
+        circulating: returns the number of circulating coins (minus reserve, Prime holdings...)
+        getblockcount: returns the current block height as a plain text string
+        getdifficulty: returns the difficulty as a plain text string
+        hashrate: returns the hashrate in GH/s (when supported, blockchain.info API compatible)
+        nethashps: returns the hashrate in H/s (when supported)
+        netmhashps: returns the hashrate in MH/s (when supported)
+        rich: returns the rich list top 1000 (JSON format)
+        summary: returns summary information for all explorers
+        ticker.btc: returns the last market ticker in BTC, as tracked by the explorer, only one market is tracked and this value can be several minutes behind the market. Use market APIs directly for more accurate quotations.
+        ticker.usd: returns the last market ticker in USD, as tracked by the explorer and BitPay rate, only one market is tracked and this value can be several minutes behind the market. Use market APIs directly for more accurate quotations.
+        totalbc: returns the outstanding number of coins in satoshis (x 1e8, for compatibility with blockhain.info API)
+        totalcoins: returns the outstanding number of coins
 
 ```javasctipt
 var coins="ltc";
@@ -77,18 +78,15 @@ client.api("ltc","getdifficulty",function (error, data) {
 });
 ```
 
-###history
+### History
+
 **Examples**
 Request:
     /history
 
     param: 
-    coins: string (symbol blockchain) example : ltc,btc,neo
-    address: address of wallet
-
-    query:Information about jobs
-    resultat: number of resultat per page
-    page : number of page
+      coins: string (symbol blockchain) example : ltc,btc,neo
+      address: address of wallet
 
 ```javasctipt
 client.history(coins,address,function (error, data) {
